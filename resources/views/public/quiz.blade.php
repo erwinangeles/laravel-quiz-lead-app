@@ -29,7 +29,7 @@
 
     <div class="container">
         <div class="row" style="padding: 30px">
-            <a type="button" class="btn btn-primary btn-lg" href="{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $quiz->questions()->first()->id])}}">Start Quiz</a>
+            <a class="btn btn-primary btn-lg" href="{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $quiz->questions()->first()->id])}}">Start Quiz</a>
         </div>
     </div>
 

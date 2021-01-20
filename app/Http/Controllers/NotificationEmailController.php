@@ -23,8 +23,8 @@ class NotificationEmailController extends Controller
             }
             $email_content .= "<p><strong>" . $q->prompt . "</strong></p>" . $a;
         }
-        $recipients = [env("SES_TO_EMAIL"), env("SES_ADMIN_EMAIL")];
-        Mail::to($recipients)->send(new SendAmazonSes($email_content));
+        $recipient = env("SES_TO_EMAIL");
+        Mail::to($recipient)->bcc(env("SES_ADMIN_EMAIL"), env("COMPANY_NAME"))->send(new SendAmazonSes($email_content));
         return 'Thanks for submitting. We will be in touch';
     }
 }

@@ -8,10 +8,12 @@
     }
     #secondLogo{
         width: 250px;
+        height: auto;
     }
     @media only screen and (max-width: 600px) {
   #secondLogo {
     width: 40%;
+    height: auto;
   }
 }
 </style>
@@ -19,7 +21,9 @@
 @section('body')
     <div class="container" style="margin-top: 80px">
         <div class="row">
-            <img id="secondLogo" src="{{env("SECOND_LOGO")}}" class="mx-auto responsive-img"/>
+            <div style="text-align: center">
+                <img id="secondLogo" src="{{env("SECOND_LOGO")}}" />
+            </div>
         </div>
     </div>
 

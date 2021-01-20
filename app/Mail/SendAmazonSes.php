@@ -29,6 +29,6 @@ class SendAmazonSes extends Mailable
      */
     public function build()
     {
-        return $this->subject('New submission from TinaBaljianFit.com')->from(env('SES_FROM_EMAIL'))->view('emails.formcapture')->with('email_content', $this->email_content);
+        return $this->subject("New form submission")->from(env('SES_FROM_EMAIL'), env("COMPANY_NAME"))->view('emails.formcapture')->with('email_content', $this->email_content);
     }
 }

@@ -34,5 +34,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    
+    'ses' => [
+        'key' => env('SES_KEY'),
+        'secret' => env('SES_KEY_SECRET'),
+        'region' => env('SES_REGION'),
+    ],
 
 ];

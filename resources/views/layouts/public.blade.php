@@ -22,7 +22,6 @@
 
     @yield('scripts')
 </body>
-
 <footer class="container" style="margin-top: 50px;">
     <div class="row">
       <div class="col md-6 lg-6 s12">

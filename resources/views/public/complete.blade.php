@@ -19,6 +19,8 @@
 </style>
 @endsection
 @section('body')
+@if(!request()->get('lightbox'))
+
     <div class="container" style="margin-top: 20px">
         <div class="row">
           <div style="text-align: center">
@@ -26,7 +28,7 @@
           </div>
         </div>
     </div>
-
+@endif
     <div class="container">
 
         <div class="row">

@@ -22,6 +22,7 @@
 
     @yield('scripts')
 </body>
+@if(!request()->get('lightbox'))
 <footer class="container" style="margin-top: 50px;">
     <div class="row">
       <div class="col md-6 lg-6 s12">
@@ -35,4 +36,5 @@
       </div>
     </div>
   </footer>
+  @endif
 </html>

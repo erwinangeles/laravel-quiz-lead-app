@@ -20,6 +20,7 @@
 </style>
 @endsection
 @section('body')
+@if(!request()->get('lightbox'))
     <div class="container" style="margin-top: 80px">
         <div class="row">
             <div style="text-align: center">
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-
+@endif
     <div class="container">
 
         <div class="row">
@@ -69,10 +70,10 @@
                 localStorage.setItem(question, answer);
                 
                 if($(this).data('final')){
-                    window.location = "{{route('quiz.complete', ['quiz' => $quiz->slug])}}";
+                    window.location = "{{route('quiz.complete', ['quiz' => $quiz->slug])}}" @if(request()->get('lightbox')) + "?lightbox=true" @endif;
 
                 }else{
-                    window.location = "{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $nextStep])}}";
+                    window.location = "{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $nextStep])}}" @if(request()->get('lightbox')) + "?lightbox=true" @endif;
 
                 }
             });
@@ -85,10 +86,10 @@
                 if(answer){
                     localStorage.setItem(question, "CUSTOM-" + answer);
                     if($(this).data('final')){
-                        window.location = "{{route('quiz.complete', ['quiz' => $quiz->slug])}}";
+                        window.location = "{{route('quiz.complete', ['quiz' => $quiz->slug])}}" @if(request()->get('lightbox')) + "?lightbox=true" @endif;
 
                     }else{
-                        window.location = "{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $nextStep])}}";
+                        window.location = "{{route('view.quizstep', ['slug' => $quiz->slug,'question' => $nextStep])}}" @if(request()->get('lightbox')) + "?lightbox=true" @endif;
 
                     }
                 }else{

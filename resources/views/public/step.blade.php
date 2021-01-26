@@ -39,14 +39,14 @@
 
                 <div class="row" style="margin-bottom: 50px">
                     @foreach($currentStep->answers as $answer)
-                    <div class="col md-6 lg-6 s12">
+                    <div class="col" style="margin-bottom: 5px;">
                         <button type="button" class="btn btn-lg btn-outline-success btn-answer" data-answer="{{$answer->id}}" data-question="{{$currentStep->id}}" data-final="@if(!$nextStep)true @endif" style="width: 100%">{{$answer->content}}</button>
                     </div>
                     @endforeach
 
                     @if($currentStep->allowCustomAnswer)
-                    <div class="col md-6 lg-6 s12">
-                        <input id="customAnswer" type="text" class="form-control" style="width: 100%" placeholder="Type your answer...">
+                    <div class="col" style="margin-bottom: 5px;">
+                        <input id="customAnswer" type="text" class="form-control" style="width: 100%; margin-bottom: 5px" placeholder="Type your answer...">
                         <button id="submitCustomAnswer" class="btn btn-primary btn-custom" data-question="{{$currentStep->id}}" data-final="@if(!$nextStep)true @endif" style="width: 100%">Next</button>
                     </div>
                     @endif

@@ -37,14 +37,11 @@ class NotificationEmailController extends Controller
         if($online_or_in_person == 'in-person'){
             $url = env("INPERSON_URL_REDIRECT");
 
-            $html = "<p>You should be automatically redirected to your recommended plan. Click <a href='" . $url. "' target='_blank'>here</a> if you don't see the new window</p>";
-            return $html;
+            return $url;
         }
 
         if($online_or_in_person == 'online'){
-            $url = env("ONLINE_URL_REDIRECT");
-            $html = "<p>You should be automatically redirected to your recommended plan. Click <a href='" . $url. "' target='_blank'>here</a> if you don't see the new window</p>";
-            return $html;
+            return $url;
         }
         return 'Thanks for submitting. We will be in touch';
     }

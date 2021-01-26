@@ -37,11 +37,11 @@ class NotificationEmailController extends Controller
         if($online_or_in_person == 'in-person'){
             $url = env("INPERSON_URL_REDIRECT");
 
-            return $url;
+            return redirect($url);
         }
 
         if($online_or_in_person == 'online'){
-            return $url;
+            return redirect($url);
         }
         return 'Thanks for submitting. We will be in touch';
     }

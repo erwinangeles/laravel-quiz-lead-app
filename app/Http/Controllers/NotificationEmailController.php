@@ -34,15 +34,17 @@ class NotificationEmailController extends Controller
         $recipient = env("SES_TO_EMAIL");
         Mail::to($recipient)->bcc(env("SES_ADMIN_EMAIL"), env("COMPANY_NAME"))->send(new SendAmazonSes($email_content));
 
-        if($online_or_in_person == 'in-person'){
-            $url = env("INPERSON_URL_REDIRECT");
+        // if($online_or_in_person == 'in-person'){
+        //     $url = env("INPERSON_URL_REDIRECT");
 
-            return redirect($url);
-        }
+        //     return redirect($url);
+        // }
 
-        if($online_or_in_person == 'online'){
-            return redirect($url);
-        }
-        return 'Thanks for submitting. We will be in touch';
+        // if($online_or_in_person == 'online'){
+        //     return redirect($url);
+        // }
+        // return 'Thanks for submitting. We will be in touch';
+
+        return redirect()->route('thankyou');
     }
 }

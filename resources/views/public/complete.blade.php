@@ -59,7 +59,7 @@
                                 <div id="mc_embed_signup_scroll">
                             <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
                             <div class="mc-field-group mb-3">
-                                <label for="mce-FULLNAME">Name  <span class="asterisk">*</span>
+                                <label for="mce-FULLNAME">Full Name  <span class="asterisk">*</span>
                               </label>
                                 <input type="text" value="" name="FULLNAME" class="required form-control" id="mce-FULLNAME" aria-required="true">
                               </div>

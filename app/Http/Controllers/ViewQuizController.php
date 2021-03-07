@@ -30,4 +30,8 @@ class ViewQuizController extends Controller
         $quiz = Quiz::where('slug', '=', $slug)->active()->firstOrFail();
         return view('public.complete', compact('quiz'));
     }
+
+    public function thankyou(){
+        return view('public.thankyou');
+    }
 }

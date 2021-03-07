@@ -18,6 +18,7 @@
 Route::get('quiz/{slug}', 'ViewQuizController@show')->name('view.quiz');
 Route::get('quiz/{slug}/step/{question}', 'ViewQuizController@step')->name('view.quizstep');
 Route::get('quiz/{slug}/complete', 'ViewQuizController@complete')->name('quiz.complete');
+Route::get('thank-you', 'ViewQuizController@thankyou')->name('thankyou');
 
 Route::post('send/email/{quiz}', 'NotificationEmailController@sendMail')->name('mail.send');
 

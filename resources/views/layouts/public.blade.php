@@ -37,7 +37,7 @@
             <a href="#">Terms of Service</a></small> 
       </div>
       <div class="col md-6 lg-6 s12">
-        <img src="{{env("LOGO")}}" class="float-end" style="width: 250px; max-width: 100%"/>
+        <img src="{{asset("img/second_logo.png")}}" class="float-end" style="width: 250px; max-width: 100%"/>
       </div>
     </div>
   </footer>

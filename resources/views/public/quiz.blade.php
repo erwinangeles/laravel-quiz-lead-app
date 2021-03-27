@@ -22,7 +22,7 @@
     <div class="container" style="margin-top: 80px">
         <div class="row">
             <div style="text-align: center">
-                <img id="secondLogo" src="{{env("SECOND_LOGO")}}" />
+                <img id="secondLogo" src="{{asset('img/logo.png')}}" />
             </div>
         </div>
     </div>

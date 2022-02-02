@@ -13,6 +13,7 @@
 <!--<![endif]-->
 <style type="text/css">
 		body {
+			background-image: url(/img/bg.png);
 			margin: 0;
 			padding: 0;
 		}

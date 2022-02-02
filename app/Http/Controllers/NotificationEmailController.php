@@ -14,7 +14,7 @@ class NotificationEmailController extends Controller
     public function sendMail($id, Request $request){
         $quiz = Quiz::findOrFail($id);
         $online_or_in_person = null;
-        $email_content = "<h3>" . $request->get('name') . " - " . $request->get('email') . "</h3><p>Quiz Answers</p>";
+        $email_content = "<h3>" . $request->get('FULLNAME') . " - " . $request->get('email') . "</h3><p>Quiz Answers</p>";
         foreach($quiz->questions as $q){
             $a = QuizAnswer::where('id', '=', $request->get($q->id))->first();
             if($a == null){

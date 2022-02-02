@@ -61,7 +61,7 @@
                             <div class="mc-field-group mb-3">
                                 <label for="mce-FULLNAME">Full Name  <span class="asterisk">*</span>
                               </label>
-                                <input type="text" value="" name="FULLNAME" class="required form-control" id="mce-FULLNAME" aria-required="true">
+                                <input type="text" value="" name="FULLNAME" class="required form-control fullName" id="mce-FULLNAME" aria-required="true">
                               </div>
                               <div class="mc-field-group mb-3">
                                 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
@@ -101,7 +101,7 @@
         $( document ).ready(function() {
 
             $('body').on('DOMSubtreeModified', '#mce-success-response', function(){
-              let name = $("#mce-MMERGE6").val();
+              let name = $("#mce-FULLNAME").val();
               let email = $("#mce-EMAIL").val();
 
               $("#name").val(name);

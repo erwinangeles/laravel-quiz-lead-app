@@ -133,7 +133,7 @@
 <div style="border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
 <!--<![endif]-->
 <div align="center" class="img-container center autowidth" style="padding-right: 0px;padding-left: 0px;">
-<img align="center" alt="logo" border="0" class="center autowidth" src="{{env("LOGO")}}" title="logo" width="149"/>
+<img align="center" alt="logo" border="0" class="center autowidth" src="{{asset('img/second_logo.png')}}" title="logo" width="149"/>
 </div>
 </div>
 </div>

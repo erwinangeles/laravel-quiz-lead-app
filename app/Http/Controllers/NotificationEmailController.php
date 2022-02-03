@@ -14,7 +14,7 @@ class NotificationEmailController extends Controller
     public function sendMail($id, Request $request){
         $quiz = Quiz::findOrFail($id);
         $online_or_in_person = null;
-        $email_content = "<h3>" . $request->get('FULLNAME') . " - " . $request->get('email') . "</h3><p>Quiz Answers</p>";
+        $email_content = "<h3>Name: " . $request->get('name') . "</h3><h3>Email: " . $request->get('email') . "</h3><p>Quiz Answers</p>";
         foreach($quiz->questions as $q){
             $a = QuizAnswer::where('id', '=', $request->get($q->id))->first();
             if($a == null){
@@ -32,8 +32,8 @@ class NotificationEmailController extends Controller
             }
         }
         $recipient = env("SES_TO_EMAIL");
-        Mail::to($recipient)->bcc(env("SES_ADMIN_EMAIL"), env("COMPANY_NAME"))->send(new SendAmazonSes($email_content));
 
+        Mail::to($recipient)->cc(env('SES_ADMIN_EMAIL'))->send(new SendAmazonSes($email_content));
         // if($online_or_in_person == 'in-person'){
         //     $url = env("INPERSON_URL_REDIRECT");
 

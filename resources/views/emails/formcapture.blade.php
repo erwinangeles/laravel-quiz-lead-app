@@ -134,6 +134,8 @@
 <!--<![endif]-->
 <div align="center" class="img-container center autowidth" style="padding-right: 0px;padding-left: 0px;">
 <img align="center" alt="logo" border="0" class="center autowidth" src="{{asset('img/second_logo.png')}}" title="logo" width="149"/>
+<img alt="secondlogo" border="0" class="center autowidth" src="{{asset('img/second_logo.png')}}" title="logo" width="149"/>
+
 </div>
 </div>
 </div>

@@ -134,11 +134,8 @@
 <!--<![endif]-->
 <div align="center" class="img-container center autowidth" style="padding-right: 0px;padding-left: 0px;">
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 0px;padding-left: 0px;" align="center"><![endif]-->
-<div style="font-size:1px;line-height:22px"> </div><img align="center" alt="logo" border="0" class="center autowidth" src="{{env("LOGO")}}" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 149px; display: block;" title="logo" width="149"/>
+<img align="center" alt="logo" border="0" class="center autowidth" src="{{env("LOGO")}}" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 149px; display: block;" title="logo" width="149"/>
 </div>
-<!--[if (!mso)&(!IE)]><!-->
-</div>
-<!--<![endif]-->
 </div>
 </div>
 <!--[if (mso)|(IE)]></td></tr></table><![endif]-->

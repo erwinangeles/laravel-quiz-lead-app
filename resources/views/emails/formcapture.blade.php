@@ -133,7 +133,7 @@
 <div style="border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
 <!--<![endif]-->
 <div align="center" class="img-container center autowidth" style="padding-right: 0px;padding-left: 0px;">
-<div style="height: 87px; width: 200px; display: block; background: url({{env("LOGO")}}); background-size: contain;"></div>
+<div style="height: 49px; width: 150px; display: block; background: url(https://tinabfit.appme.link/img/second_logo.png); background-size: contain;"></div>
 
 </div>
 </div>

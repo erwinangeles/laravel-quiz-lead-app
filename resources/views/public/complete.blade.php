@@ -68,6 +68,10 @@
                               </label>
                                 <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" aria-required="true">
                               </div>
+                              <div class="mc-field-group mb-3" style="display: none">
+                                <label for="mce-PHONE">Phone Number </label>
+                                <input type="text" name="PHONE" class="" value="" id="mce-PHONE">
+                              </div>
                               <div id="mce-responses" class="clear">
                                 <div class="response alert alert-danger" role="alert" id="mce-error-response" style="display:none"></div>
                                 <div class="response alert alert-success" role="alert" id="mce-success-response" style="display:none"></div>
@@ -99,6 +103,10 @@
 @section('scripts')
     <script>
         $( document ).ready(function() {
+          let phone = localStorage.getItem('12').replace('CUSTOM-','');
+          let instagram = localStorage.getItem('13').replace('CUSTOM-','');
+
+          $("#mce-PHONE").val(phone);
 
             $('body').on('DOMSubtreeModified', '#mce-success-response', function(){
               let name = $("#mce-FULLNAME").val();
